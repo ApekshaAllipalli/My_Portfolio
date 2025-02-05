@@ -28,20 +28,21 @@
 
     /* Clickable Portfolio Box */
     .logo-box {
-        font-family: 'Arial', sans-serif;
-        font-size: 10px; /* Further reduced font size */
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-style: italic;
-        background-color: #2a7d7d; /* Box color similar to reference */
-        color: white;
-        padding: 3px 6px; /* Small padding for a compact box */
-        border-radius: 5px; /* Rounded corners */
-        display: inline-block; /* Keeps the box wrapped around the text */
-        cursor: pointer; /* Shows pointer on hover */
-        text-decoration: none; /* Removes underline */
-    }
+    font-family: 'Arial', sans-serif;
+    font-size: 16px; /* Increased font size */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Slightly increased for better readability */
+    font-style: italic;
+    background-color: #2a7d7d; /* Box color similar to reference */
+    color: white;
+    padding: 8px 14px; /* Increased padding for a bigger box */
+    border-radius: 8px; /* Slightly more rounded corners */
+    display: inline-block; /* Keeps the box wrapped around the text */
+    cursor: pointer; /* Shows pointer on hover */
+    text-decoration: none; /* Removes underline */
+}
+
 
     .logo-box:hover {
         background-color: #236b6b; /* Darker shade on hover */
@@ -166,7 +167,7 @@
   </head>
   <body>
     <nav id="desktop-nav">
-      <a href="javascript:void(0);" class="logo-box" onclick="location.reload();">Portfolio</a>
+      <span class="logo-box">Portfolio</span>
       <div>
           <ul class="nav-links">
               <li><a href="#about">About</a></li>
@@ -214,6 +215,7 @@
 
     <!-- About Section -->
     <section id="about">
+
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
       <div class="section-container" style="display: flex; flex-direction: column; gap: 30px;">
@@ -340,11 +342,12 @@
 
   <!-- Down Arrow linking to Experience Section -->
   <img
-      src="assets/arrow.png"
-      alt="Arrow icon"
-      class="arrow"
-      onclick="location.href='#experience'"
-  />
+  src="./assets/arrow.png"
+  alt="Arrow icon"
+  class="icon arrow"
+  onclick="location.href='./#experience'"
+/>
+
 </section>
 
 <!-- CSS -->
@@ -427,36 +430,87 @@
   
   <div class="experience-details-container" style="display: flex; justify-content: space-between; gap: 20px;">
    <!-- Profound Ventures Texas, USA -->
-   <div class="details-container" style="flex: 1; text-align: center; border: 1px solid #ccc; padding: 20px; border-radius: 10px;">
-    <h2 class="experience-sub-title">Profound Ventures Texas, USA</h2>
-    <p class="experience-role" style="margin-top: 0;">Software Development Intern</p>
-    <p class="experience-role">August 2024 – December 2024</p>
-    <ul style="text-align: left; list-style-position: inside;">
-      <li>Contributed to the development of a home component from scratch, enhancing the organization's online presence.</li>
-      <li>Integrated advanced tools such as Hanko for passwordless authentication and configured Neon databases with Baselime logging to ensure secure, reliable, and efficient application performance.</li>
-      <li>Created comprehensive end-to-end (E2E) tests using Playwright and implemented unit tests with Vitest to ensure robust application reliability.</li>
-      <li>Played a pivotal role in building and maintaining component libraries and design systems using Storybook with Chromatic, improving UI development and testing efficiency.</li>
-    </ul>
-  </div>
-<!-- Wipro Limited Bangalore, India -->
-<div class="details-container" style="flex: 1; text-align: center; border: 1px solid #ccc; padding: 20px; border-radius: 10px;">
-  <h2 class="experience-sub-title">Wipro Limited Bangalore, India</h2>
-  <p class="experience-role" style="margin-top: 0;">Project Engineer, Front-End Developer</p>
-  <p class="experience-role">December 2021 – December 2022</p>
-  <ul style="text-align: left; list-style-position: inside;">
-    <li>Deeply involved in the development of qTrace’s Lead to Order (L2O) process using Angular and React JS.</li>
-    <li>Worked on mobile development, dynamic UI creation, and implemented Work Break Structure (WBS) based on customer specifications, with custom modifications and new dashboard templates.</li>
-    <li>Collaborated with DevOps teams to integrate CI/CD pipelines, automating build, testing, and deployment processes for faster, error-free releases.</li>
-    <li>Optimized front-end performance through lazy loading, code splitting, and bundling with tools like Webpack and Vite.</li>
-    <li>Ensured continuous system performance monitoring, frequent testing, and troubleshooting to maintain system reliability.</li>
-    <li>Enhanced user interfaces and accessibility features, gaining proficiency in tools such as White Parrot.</li>
-  </ul>
+   <div class="details-container" style="position: relative; border: 1px solid #ccc; padding: 20px; border-radius: 10px; padding-top: 50px; text-align: left;">
+    <img src="./assets/pv.png" alt="Profound Ventures Logo" 
+        style="width: 100px; height: auto; position: absolute; top: 10px; right: 10px; border-radius: 8px;">
+    
+    <div>
+        <h2 class="experience-sub-title">Profound Ventures, Texas, USA</h2>
+        <p class="experience-role" style="margin-top: 0;"><strong>Software Development Intern</strong></p>
+        <p class="experience-role"><strong>August 2024 – December 2024</strong></p>
+        
+        <p><strong>🏗️ Component Development:</strong> Contributed to the **development of a home component from scratch**, enhancing the organization's **online presence**.</p>
+        <p><strong>🔐 Authentication & Security:</strong> Integrated **Hanko** for **passwordless authentication** and configured **Neon databases with Baselime logging** for secure, reliable, and efficient performance.</p>
+        <p><strong>🧪 Testing & QA:</strong> Created comprehensive **end-to-end (E2E) tests** using **Playwright** and implemented **unit tests** with **Vitest** to ensure application robustness.</p>
+        <p><strong>🎨 UI/UX & Design Systems:</strong> Played a key role in **building and maintaining component libraries** and **design systems** using **Storybook with Chromatic**, improving **UI development and testing efficiency**.</p>
+    </div>
 </div>
 
-<div class="details-container" style="flex: 1; text-align: center; border: 1px solid #ccc; padding: 20px; border-radius: 10px;">
+
+
+<!-- Wipro Limited Bangalore, India -->
+<div class="details-container" style="position: relative; border: 1px solid #ccc; padding: 20px; border-radius: 10px; padding-top: 50px; text-align: left;">
+  <img src="./assets/wipro.png" alt="Wipro Logo" 
+      style="width: 100px; height: auto; position: absolute; top: 10px; right: 10px; border-radius: 8px;">
+  
+  <div>
+      <h2 class="experience-sub-title">Wipro Limited, Bangalore, India</h2>
+      <p class="experience-role" style="margin-top: 0;"><strong>Project Engineer, Front-End Developer</strong></p>
+      <p class="experience-role"><strong>December 2021 – December 2022</strong></p>
+      
+      <p><strong>🖥️ Web Development:</strong> Contributed to the development of **qTrace’s Lead to Order (L2O) process** using **Angular and React JS**.</p>
+      <p><strong>📱 Mobile & UI Development:</strong> Built **dynamic UI components** and worked on **mobile development**, implementing **Work Break Structure (WBS)** with custom modifications.</p>
+      <p><strong>🔧 DevOps & CI/CD:</strong> Collaborated with **DevOps teams** to integrate **CI/CD pipelines**, automating build, testing, and deployment for seamless releases.</p>
+      <p><strong>⚡ Performance Optimization:</strong> Improved **front-end performance** through **lazy loading, code splitting, and bundling** using tools like **Webpack and Vite**.</p>
+      <p><strong>🛠️ System Monitoring & Troubleshooting:</strong> Ensured **continuous system performance monitoring**, frequent testing, and troubleshooting for **maximum system reliability**.</p>
+      <p><strong>🎨 UI/UX & Accessibility:</strong> Enhanced **user interfaces and accessibility features**, gaining proficiency in **tools like White Parrot**.</p>
+  </div>
+</div>
+
+
+
+<div class="details-container" style="position: relative; border: 1px solid #ccc; padding: 20px; border-radius: 10px; padding-top: 50px; text-align: left;">
+  <img src="./assets/m&tbank.png" alt="M&T Bank Logo" 
+      style="width: 100px; height: auto; position: absolute; top: 10px; right: 10px; border-radius: 8px;">
+  
+  <div>
+      <h2 class="experience-sub-title">M&T Bank, Dallas, Texas, USA</h2>
+      <p class="experience-role" style="margin-top: 0;"><strong>Sr. Java Full Stack Developer</strong></p>
+      <p class="experience-role"><strong>December 2023 – August 2024</strong></p>
+      
+      <p><strong>💻 Full-Stack Development:</strong> Designed and implemented scalable backend solutions using Spring MVC, Spring Boot, and Hibernate.</p>
+      <p><strong>🔗 API Development:</strong> Developed and integrated RESTful & SOAP APIs using JAX-RS, JMS, and Apache HTTP Client for efficient data exchange.</p>
+      <p><strong>📊 Database Optimization:</strong> Created and optimized SQL queries, stored procedures, and views for data processing in Oracle, PostgreSQL, and MongoDB databases.</p>
+      <p><strong>🚀 DevOps & CI/CD:</strong> Implemented CI/CD pipelines with Jenkins, GitHub Actions, and Azure DevOps, ensuring automated deployment and testing.</p>
+      <p><strong>🎨 Front-End Development:</strong> Developed dynamic ReactJS, JavaScript, and JSP components, enhancing user experience.</p>
+      <p><strong>🐳 Containerization & Cloud:</strong> Managed and optimized Docker containers and Kubernetes clusters for seamless deployment of microservices.</p>
+      <p><strong>📌 Project Management:</strong> Used JIRA for tracking issues, managing tasks, and ensuring smooth project execution.</p>
+  </div>
+</div>
+
+
+<div class="details-container" style="position: relative; border: 1px solid #ccc; padding: 20px; border-radius: 10px; padding-top: 50px; text-align: left;">
+  <img src="./assets/globe life.png" alt="Globe Life Logo" 
+      style="width: 100px; height: auto; position: absolute; top: 10px; right: 10px; border-radius: 8px;">
+  
+  <div>
+      <h2 class="experience-sub-title">Globe Life, Plano, Texas, USA</h2>
+      <p class="experience-role" style="margin-top: 0;"><strong>Java Full Stack Developer</strong></p>
+      <p class="experience-role"><strong>May 2023 – November 2023</strong></p>
+      
+      <p><strong>💻 Full-Stack Development:</strong> Developed applications using Struts, Spring Boot, Angular 11/12, React, and Node.js while following Agile (SCRUM) & TDD methodologies.</p>
+      <p><strong>🛠️ Backend & Microservices:</strong> Built RESTful APIs with Spring Boot, implemented SOA-based J2EE Web Services, and optimized databases in MySQL, PostgreSQL, and MongoDB.</p>
+      <p><strong>📊 Big Data & NoSQL:</strong> Worked with Apache Spark on Hadoop, integrated Hive & SQL/Oracle, and optimized MongoDB solutions.</p>
+      <p><strong>🚀 DevOps & CI/CD:</strong> Automated deployments using Docker, Jenkins, GitHub, AWS Lambda, and PCF, ensuring smooth and scalable operations.</p>
+      <p><strong>🎨 Front-End Development:</strong> Designed responsive UIs with HTML, CSS3, Bootstrap, JavaScript, and integrated REST APIs for seamless functionality.</p>
+  </div>
+</div>
+
+<div class="details-container" style="flex: 1; text-align: left; border: 1px solid #ccc; padding: 20px; border-radius: 50px;">
   <h2 class="experience-sub-title">Verzeo, India</h2>
-  <p class="experience-role" style="margin-top: 0;">Machine Learning with Python, Intern</p>
-  <p class="experience-role">June 2020 – August 2020</p>
+  <p class="experience-role" style="margin-top: 0;"><strong>Machine Learning with Python, Intern</strong></p>
+  <p class="experience-role"><strong>June 2020 – August 2020</strong></p>
+
   <ul style="text-align: left; list-style-position: inside;">
     <li>Contributed to the development and implementation of machine learning models using Python to solve real-world problems in various domains, including data analysis and prediction.</li>
     <li>Collaborated with a team of data scientists and engineers to gather, clean, and preprocess data, ensuring its readiness for model training and evaluation.</li>
@@ -467,113 +521,6 @@
     <li>Documented the entire machine learning pipeline, providing clear explanations of methodologies used, ensuring reproducibility and ease of understanding for future projects.</li>
   </ul>
 </div>
-
-  <!-- Existing Full Stack and Backend Development Experience -->
-  <div class="about-containers">
-    <div class="details-container">
-      <h2 class="experience-sub-title">Full Stack Development</h2>
-      <div class="article-container">
-        <article>
-          <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-          <div>
-            <h3>HTML</h3>
-            <p>Advanced</p>
-          </div>
-        </article>
-        <article>
-          <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-          <div>
-            <h3>CSS</h3>
-            <p>Advanced</p>
-          </div>
-        </article>
-        <article>
-          <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-          <div>
-            <h3>SASS</h3>
-            <p>Experienced</p>
-          </div>
-        </article>
-        <article>
-          <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-          <div>
-            <h3>JavaScript</h3>
-            <p>Experienced</p>
-          </div>
-        </article>
-        <article>
-          <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-          <div>
-            <h3>TypeScript</h3>
-            <p>Advanced</p>
-          </div>
-        </article>
-        <article>
-          <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-          <div>
-            <h3>Material UI</h3>
-            <p>Intermediate</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  
-    <div class="details-container">
-      <h2 class="experience-sub-title">Backend Development</h2>
-      <div class="article-container">
-        <article>
-          <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-          <div>
-            <h3>PostgreSQL</h3>
-            <p>Basic</p>
-          </div>
-        </article>
-        <article>
-          <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-          <div>
-            <h3>Node JS</h3>
-            <p>Advanced</p>
-          </div>
-        </article>
-        <article>
-          <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-          <div>
-            <h3>Express JS</h3>
-            <p>Basic</p>
-          </div>
-        </article>
-        <article>
-          <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-          <div>
-            <h3>Git</h3>
-            <p>Experienced</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  
-    <div class="details-container">
-      <h2 class="experience-sub-title">Cloud Services</h2>
-      <div class="article-container">
-        <article>
-          <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-          <div>
-            <h3>Azure</h3>
-            <p>Basic</p>
-          </div>
-        </article>
-        <article>
-          <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-          <div>
-            <h3>AWS</h3>
-            <p>Advanced</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-  
-  
   <!-- Arrow to Projects -->
   <img
     src="./assets/arrow.png"
@@ -582,6 +529,7 @@
     onclick="location.href='./#projects'"
   />
 </section>
+
 
     <!-- Projects Section -->
     <section id="projects">
